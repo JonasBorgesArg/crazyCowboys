@@ -1,0 +1,414 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container-box{
+	background: #fbdd65;
+}
+.product-title{
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: 2.8em;
+	color: #3b3221;
+	font-family: 'Rye', cursive;
+}
+
+/************	NAVIGATION	************/
+nav{
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1rem;
+	top: 0;
+	z-index: 100;
+	font-family: 'Rye', cursive;
+}
+.navigation{
+	display: flex;
+}
+.nav ul{
+	list-style: none;
+}
+.nav li{
+	font-size: 1.5rem;
+	padding-right: 2rem;
+}
+a{
+	text-decoration: none;
+	font-family: 'Bebas Neue', cursive;
+	color: #000;	
+}
+.nav li a:hover{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.nav img{
+	width: 200px;
+}
+.nav button{
+	display: none;
+}
+
+/************	TOGGLE MENU	************/
+@media screen and (max-width: 768px) {
+	.nav button{
+	display: inline-block;
+	color: #000;
+}	
+  .navigation{
+  position:fixed;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, .9);
+	z-index: 998;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/*translate acepta X e Y*/
+	transform: translate(0,-150%);
+	transition: transform 0.3s ease;
+  }
+  .navigation.is-active{
+  	transform: translate(0,0);
+  }
+  
+  .navigation li{
+  	width: 100%;
+  	padding-top: 5rem;
+  	display: flex;
+  	flex-direction: column;
+  	text-align: center;
+		align-items: center;
+  }
+  .nav .navigation li a{
+  	color: #fff;
+  }
+  
+  .panel-btn{
+	position: fixed;
+	z-index: 999;
+	top: 1vh;
+	right: 1vw;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+
+}
+
+/************	HEADER	************/
+.banner{
+	top: -100px;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 99;
+}
+.container{
+	position: absolute;
+	top: 0;
+	left: -10%;
+	width: 120%;
+	height: 100vh;
+	background: radial-gradient(#e1f1e5,#acdabb);
+}
+.container #scene .layer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+.container #scene .layer img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@keyframes brillo {
+  0%    { opacity: 0; }
+  20%   { opacity: 1; }
+  40%   { opacity: 0; }
+  60%   { opacity: 0; }
+  80%   { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+.brillo{
+	animation: brillo 5s infinite;
+}
+
+/************	WHAT IS CC	************/
+.whatis{   
+ 		position: relative;
+ 		display: flex;
+ 		flex-flow: row wrap;
+ 		align-items: center;
+ 		justify-content: center;
+ 		grid-gap: 30px 50px;
+ 		gap: 30px 50px;
+ 		padding: 40px 40px 100px;
+ 		width: 100%;
+}
+.whatis .what{
+	width: 50%;
+}
+
+.whatis .what h1{
+	font-family: 'Rye', cursive;
+	color: #3b3221;
+	font-size: 2.8em;
+	text-align: start;
+}
+.whatis .what p{
+	margin: 30px 0;
+	font-family: 'Bebas Neue', cursive;
+	color: rgba(99, 84, 54, 1.0);
+	font-size: 1.5em;
+	text-align: start;
+}
+.whatis .whatIsImg{
+	display: block;
+	width: min(100%,400px);
+}
+/************	HOW DO I GET REWARDS	************/
+.rewards{   
+ 		position: relative;
+ 		display: flex;
+ 		flex-flow: row wrap;
+ 		align-items: center;
+ 		justify-content: center;
+ 		grid-gap: 30px 50px;
+ 		gap: 30px 50px;
+ 		padding: 40px 40px 100px;
+ 		width: 100%;
+}
+.rewards .reward{
+	width: 50%;
+}
+
+.rewards .reward h1{
+	font-family: 'Rye', cursive;
+	color: #3b3221;
+	font-size: 2.8em;
+	text-align: start;
+}
+.rewards .reward p{
+	margin: 30px 0;
+	font-family: 'Bebas Neue', cursive;
+	color: rgba(99, 84, 54, 1.0);
+	font-size: 1.5em;
+	text-align: start;
+}
+.rewards .rewardImg{
+	display: block;
+	width: min(100%,400px);
+}
+
+
+/************	PRODUCTS	************/
+
+.products{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-wrap: wrap;
+	width: 100%;
+	transform-style: preserve-3d;
+}
+
+.products .box{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	margin: 10px;
+	background: #94753b;
+	border-radius: 20px;
+	transform-style: preserve-3d;
+}
+.products .cactus .box{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+	background: #94753b;
+	border-radius: 20px;
+	transform-style: preserve-3d;
+}
+
+.products .box .name{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'Bree Serif', serif;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	transform-style: preserve-3d;
+	transform: translate3d(0, 0, 75px);
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 10;
+}
+
+.products .box:hover .name{
+	top: 40px;
+	opacity: 1;
+}
+.products .personajes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.products .cactus{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 2rem;
+	width: 90%;
+}
+@media screen and (max-width: 768px){
+	.products .cactus{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+}
+
+.products .cactus img{
+	width: 150px;
+}
+.products .box .buy{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	font-family: 'Bree Serif', serif;
+	font-size: .8em;
+	transform-style: preserve-3d;
+	transform: translate3d(-50%, 0, 75px);
+	color: #fff;
+	background: #333;
+	padding: 10px 25px;
+	border-radius: 30px;
+	text-decoration: none;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: 10;
+}
+
+.products .box:hover .buy{
+	bottom: 30px;
+	opacity: 1;
+}
+
+.products .box .circle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	transition: 0.5s;
+	background: rgba(86, 84, 179, 1.0);
+	transform-style: preserve-3d;
+	z-index: 8;
+	opacity: 1;
+	transform: translate3d(-50%,-50%,0px);
+}
+.products .box:nth-child(2) .circle{
+	background: rgba(91, 165, 212, 1.0);
+}
+
+.products .box .product{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 230px;
+	transition: 0.5s;
+	z-index: 9;
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transform: translate3d(-50%, -50%, 10px) rotate(0deg);
+}
+.products .box:hover .product{
+	transform: translate3d(-50%, -50%, 100px) rotate(1deg);
+}
+
+/************	FEATURES	************/
+.features{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	align-items: center;
+ 		justify-content: center;
+ 		grid-gap: 30px 50px;
+ 		gap: 30px 50px;
+ 		padding: 40px 40px 100px;
+ 		width: 100%;
+}
+.features .features-container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.features .features-container h1{
+	font-family: 'Rye', cursive;
+	color: #3b3221;
+	font-size: 2.8em;
+	text-align: end;
+}
+.features .features-container ul{
+	list-style: none;
+}
+.features .features-container ul li {
+	font-family: 'Bebas Neue', cursive;
+	color: rgba(99, 84, 54, 1.0);
+	font-size: 1.5em;
+	text-align: end;
+	cursor: pointer;
+}
+
+.features .text-container{
+	position: relative;
+	width: 50%;
+	height: 200px;
+	background: #94753b;
+	border-radius: 20px;
+}
+.features .text-container .container-t{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.features .text-container .container-t h2{
+	margin: 20px;
+	font-family: 'Rye', cursive;
+	color: #3b3221;
+	text-align: start;
+}
+.features .text-container .container-t p{
+	margin: 0 20px;
+	font-family: 'Bebas Neue', cursive;
+	color: #fff;
+	font-size: 1.5em;
+	text-align: start;
+}
