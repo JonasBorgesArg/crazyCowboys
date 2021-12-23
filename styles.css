@@ -20,6 +20,8 @@ nav{
 	position: sticky;
 	display: flex;
 	justify-content: space-between;
+	text-align: center;
+	align-items: center;
 	width: 100%;
 	padding: 1rem;
 	top: 0;
@@ -33,19 +35,46 @@ nav{
 	list-style: none;
 }
 .nav li{
-	font-size: 1.5rem;
-	padding-right: 2rem;
+	padding-right: 1rem;
 }
-a{
+.nav ul li a{
+	position: relative;
 	text-decoration: none;
+	display: inline-block;
 	font-family: 'Bebas Neue', cursive;
-	color: #000;	
+	font-size: 2em;
+	color: #000;
+	padding: 0 20px;
+	border-radius: 10px;
+	background:rgba(148, 117, 59, 0.5) ;
+	border:  1px solid rgba(0, 0, 0, 0.4);	
+	border-bottom:  1px solid rgba(148, 117, 59, 0.2);	
+	border-right:  1px solid rgba(148, 117, 59, 0.2);
+	box-shadow: 2px 3px 0 rgba(0, 0, 0, 1);
+	backdrop-filter: blur(2px);
+	transition: 0.5s;
+	overflow: hidden;	
 }
-.nav li a:hover{
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+ul li a:hover{
+	transform: translateY(10px);
+}
+ul li a::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 60px;
+	background: rgba(255, 255, 255, 0.5);
+	transform: skewX(45deg) translateX(230px);
+	transition: 0.5s;
+}
+ul li a:hover::before{
+	transform: skewX(45deg) translateX(-150px);
 }
 .nav img{
-	width: 200px;
+	width: 180px;
 }
 .nav button{
 	display: none;
@@ -175,8 +204,9 @@ a{
 }
 .whatis .what p{
 	margin: 30px 0;
-	font-family: 'Bebas Neue', cursive;
-	color: rgba(99, 84, 54, 1.0);
+	font-family: 'Roboto Slab', serif;
+	font-weight: 600;
+	color: #94753b;
 	font-size: 1.5em;
 	text-align: start;
 }
@@ -208,8 +238,9 @@ a{
 }
 .rewards .reward p{
 	margin: 30px 0;
-	font-family: 'Bebas Neue', cursive;
-	color: rgba(99, 84, 54, 1.0);
+	font-family: 'Roboto Slab', serif;
+	font-weight: 600;
+	color: #94753b;
 	font-size: 1.5em;
 	text-align: start;
 }
@@ -239,6 +270,7 @@ a{
 	margin: 10px;
 	background: #94753b;
 	border-radius: 20px;
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
 	transform-style: preserve-3d;
 }
 .products .cactus .box{
@@ -360,15 +392,16 @@ a{
 	flex-flow: wrap;
 	align-items: center;
  		justify-content: center;
- 		grid-gap: 30px 50px;
- 		gap: 30px 50px;
- 		padding: 40px 40px 100px;
+ 		grid-gap: 30px 45px;
+ 		padding: 40px 1px 100px;
  		width: 100%;
 }
 .features .features-container{
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	width: 30%;
+
 }
 .features .features-container h1{
 	font-family: 'Rye', cursive;
@@ -380,6 +413,12 @@ a{
 	list-style: none;
 }
 .features .features-container ul li {
+	position: relative;
+	padding: 9px 20px;
+	background: linear-gradient(to right, rgba(255,255,255,0), rgba(148, 117, 59, 0.5));
+	backdrop-filter: blur(2px);
+	transition: 0.5s;
+	overflow: hidden;	
 	font-family: 'Bebas Neue', cursive;
 	color: rgba(99, 84, 54, 1.0);
 	font-size: 1.5em;
@@ -387,17 +426,22 @@ a{
 	cursor: pointer;
 }
 
+.features .features-container ul li:hover{
+	transform: translateX(30px);
+}
 .features .text-container{
 	position: relative;
 	width: 50%;
-	height: 200px;
+	height: 300px;
 	background: #94753b;
 	border-radius: 20px;
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
 }
 .features .text-container .container-t{
 	position: relative;
 	display: flex;
 	flex-direction: column;
+
 }
 .features .text-container .container-t h2{
 	margin: 20px;
@@ -407,8 +451,41 @@ a{
 }
 .features .text-container .container-t p{
 	margin: 0 20px;
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
 	color: #fff;
 	font-size: 1.5em;
 	text-align: start;
+}
+
+/************	FOOTER	************/
+.footer-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 0 100px 100px 100px;
+}
+
+.footer-container .socialMedia {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.footer-container .socialMedia li{
+	padding: 20px;
+	list-style: none;
+}
+.footer-container .socialMedia li a{
+	font-size: 3em;
+	color:#3b3221;
+}
+
+.footer-container p{
+	margin: 0 20px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 600;
+	color: #94753b;
+	font-size: 1.5em;
+	text-align: center;
 }
