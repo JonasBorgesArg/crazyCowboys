@@ -42,11 +42,11 @@ nav{
 	text-decoration: none;
 	display: inline-block;
 	font-family: 'Bebas Neue', cursive;
-	font-size: 2em;
+	font-size: 1.5em;
 	color: #000;
 	padding: 0 20px;
 	border-radius: 10px;
-	background:rgba(148, 117, 59, 0.5) ;
+	background:rgba(245, 226, 119, 0.5) ;
 	border:  1px solid rgba(0, 0, 0, 0.4);	
 	border-bottom:  1px solid rgba(148, 117, 59, 0.2);	
 	border-right:  1px solid rgba(148, 117, 59, 0.2);
@@ -308,6 +308,12 @@ ul li a:hover::before{
 	align-items: center;
 	flex-wrap: wrap;
 }
+.products .pistolas{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
 .products .cactus{
 	display: flex;
 	justify-content: center;
@@ -367,6 +373,15 @@ ul li a:hover::before{
 }
 .products .box:nth-child(2) .circle{
 	background: rgba(91, 165, 212, 1.0);
+}
+.pistolas .box:nth-child(1) .circle{
+	background: rgba(186, 79, 47, 1.0);
+}
+.pistolas .box:nth-child(2) .circle{
+	background: rgba(51, 92, 189, 1.0);
+}
+.pistolas .box:nth-child(3) .circle{
+	background: rgba(51, 129, 189, 1.0);
 }
 
 .products .box .product{
