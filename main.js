@@ -8,8 +8,8 @@ VanillaTilt.init(document.querySelectorAll(".box"), {
 		speed: 400
 	});
 
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
+//var scene = document.getElementById('scene');
+//var parallaxInstance = new Parallax(scene);
 
 function menuHamburguesa(panelBtn, navMenu, menuLink){
 
@@ -26,6 +26,19 @@ function menuHamburguesa(panelBtn, navMenu, menuLink){
     }
   })
 }
+
+//parallax
+document.addEventListener("mousemove", parallax)
+function parallax(e){
+  this.querySelectorAll(".mov").forEach(layer => {
+  const speed = layer.getAttribute("data-speed")
+  const x = (window.innerWidth - e.pageX*speed)/100
+
+  layer.style.transform = `translateX(${x}px)`
+  layer.style.transition = "transform 0.5s ease"
+  })
+}
+
 
 //features
 function security(){
