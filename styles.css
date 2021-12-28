@@ -80,10 +80,14 @@ ul li a:hover::before{
 }
 
 /************	TOGGLE MENU	************/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 	.nav button{
-	display: inline-block;
-	color: #000;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: invert(1);
+	background: rgba(255, 255, 255, .8);
 }	
   .navigation{
   position:fixed;
@@ -248,6 +252,15 @@ ul li a:hover::before{
 	width: min(100%,400px);
 }
 
+@media screen and (max-width: 992px) {
+	.rewards{
+		display: flex;
+	flex-direction: column-reverse;
+	text-align: center;
+	align-items: center;
+	}
+}
+
 
 /************	PRODUCTS	************/
 
@@ -267,17 +280,25 @@ ul li a:hover::before{
 	width: 300px;
 	height: 400px;
 	margin: 10px;
-	background: #94753b;
 	border-radius: 20px;
 	box-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
 	transform-style: preserve-3d;
+		transition: 0.5s;
+	overflow: hidden;	
+
+}
+.products .personajes .box{
+	background: #D4AF37;
+}
+.products .pistolas .box{
+	background: #C0C0C0;
 }
 .products .cactus .box{
 	position: relative;
 	width: 300px;
 	height: 300px;
 	margin: 10px;
-	background: #94753b;
+	background: #CD7F32;
 	border-radius: 20px;
 	transform-style: preserve-3d;
 }
@@ -288,7 +309,8 @@ ul li a:hover::before{
 	left: 0;
 	font-family: 'Bree Serif', serif;
 	text-align: center;
-	color: #fff;
+	color: #fbdd65;
+	text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
 	width: 100%;
 	transform-style: preserve-3d;
 	transform: translate3d(0, 0, 75px);
@@ -296,7 +318,24 @@ ul li a:hover::before{
 	opacity: 0;
 	z-index: 10;
 }
+.products .box:hover{
+transform: translateY(10px);
+}
 
+.products .box::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 120%;
+	background: rgba(255, 255, 255, 0.5);
+	transform: skewX(45deg) translateX(250px);
+	transition: 0.5s;
+}
+.products .box:hover::before{
+	transform: skewX(45deg) translateX(-150px);
+}
 .products .box:hover .name{
 	top: 40px;
 	opacity: 1;
@@ -317,11 +356,10 @@ ul li a:hover::before{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	padding: 2rem;
 	width: 90%;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
 	.products .cactus{
 	display: flex;
 	flex-wrap: wrap;
@@ -341,10 +379,11 @@ ul li a:hover::before{
 	font-size: .8em;
 	transform-style: preserve-3d;
 	transform: translate3d(-50%, 0, 75px);
-	color: #fff;
-	background: #333;
+	color: #000;
+	background: #fbdd65;
 	padding: 10px 25px;
 	border-radius: 30px;
+	box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5);
 	text-decoration: none;
 	transition: 0.5s;
 	opacity: 0;
