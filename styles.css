@@ -82,7 +82,6 @@ ul li a:hover::before{
 /************	TOGGLE MENU	************/
 @media screen and (max-width: 992px) {
 	.nav button{
-	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -111,7 +110,7 @@ ul li a:hover::before{
   
   .navigation li{
   	width: 100%;
-  	padding-top: 5rem;
+  	padding-top:2rem;
   	display: flex;
   	flex-direction: column;
   	text-align: center;
@@ -119,6 +118,7 @@ ul li a:hover::before{
   }
   .nav .navigation li a{
   	color: #fff;
+  	font-size: 2.5em;
   }
   
   .panel-btn{
@@ -126,7 +126,7 @@ ul li a:hover::before{
 	z-index: 999;
 	top: 1vh;
 	right: 1vw;
-	width: 4rem;
+	width: 4.2rem;
 	height: 4rem;
 	border-radius: 50%;
 	padding: 0;
@@ -134,8 +134,8 @@ ul li a:hover::before{
 	justify-content: center;
 	align-items: center;
 	}
-
 }
+
 
 /************	HEADER	************/
 .banner{
@@ -183,6 +183,16 @@ ul li a:hover::before{
 	animation: brillo 5s infinite;
 }
 
+@media (max-width: 767px){
+.container{
+height: 10vh;
+}
+}
+@media (max-width: 400px){
+.container #scene .layer img{
+	width: 500px;
+}
+}
 /************	WHAT IS CC	************/
 .whatis{   
  		position: relative;
@@ -263,18 +273,37 @@ margin: 1em;
 	transform: skewX(45deg) translateX(-150px);
 }
 @media screen and (max-width: 992px) {
+	.whatis .what p{
+	font-size: 3.3vh;
+	line-height: 1em;
+	padding: 1em;
+	margin: 1em;
+	text-align: start;
+	}
+}
+
+@media (max-width: 767px){
 	.box-img-p img{
 		display: none;
 	}
+	.whatis .what h1{
+	font-size: calc(1.4em + 1vw);
+	}
 	.whatis .what p{
-	
 	font-size: 3.3vh;
 	line-height: 1em;
-padding: 1em;
-margin: 1em;
+	
 	text-align: start;
+	}
 }
+@media (max-width: 400px){
+	.whatis .what p{
+	font-size: 2vh;
+	line-height: 1em;
+	text-align: start;
+	}
 }
+
 
 /************	HOW DO I GET REWARDS	************/
 .rewards{   
@@ -290,35 +319,49 @@ margin: 1em;
  		background: url(finales/textura4.jpg);
 }
 .rewards .reward{
-	width: 50%;
+	width: 800px;
 }
 
 .rewards .reward h1{
 	font-family: 'Rye', cursive;
 	color: #fbdd65;
+	text-shadow: 2px 3px 0 rgba(0, 0, 0, 1);
 	font-size: calc(2em + 1vw);
-	text-align: start;
+	text-align: center;
 }
 .rewards .reward p{
 	margin: 30px 0;
 	font-family: 'Roboto Slab', serif;
 	font-weight: 600;
 	color: #fbdd65;
+	text-shadow: 2px 3px 0 rgba(0, 0, 0, 1);
 	line-height: 1.45;
-	font-size: 1.1em;
+	font-size: 3.3vh;
 	text-align: start;
 }
 
 
 @media screen and (max-width: 992px) {
-	.rewards{
-		display: flex;
-	flex-direction: column-reverse;
-	text-align: center;
-	align-items: center;
+	.rewards .reward p{
+		font-size: 3.3vh;
+		padding: 1em;
+	margin: 1em;
+	line-height: 1em;
+	text-align: start;
 	}
 }
-
+@media (max-width: 400px){
+	.rewards .reward h1{
+	font-size: calc(1.4em + 1vw);
+	}
+	.rewards .reward p{
+		font-size: 2vh;
+		padding: 1em;
+	margin: 1em;
+	line-height: 1em;
+	text-align: start;
+	}
+}
 
 /************	PRODUCTS	************/
 
@@ -418,14 +461,6 @@ transform: translateY(10px);
 	padding: 2rem;
 }
 
-@media screen and (max-width: 992px){
-	.products .cactus{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-}
-}
 
 .products .box .buy{
 	position: absolute;
@@ -493,7 +528,19 @@ transform: translateY(10px);
 	transform: translate3d(-50%, -50%, 100px) rotate(1deg);
 }
 
-
+@media screen and (max-width: 992px){
+	.products .cactus{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	}
+}
+@media (max-width: 767px){
+	.products .pistolas{
+		padding: 0rem;
+	}
+}
 
 /************	FEATURES	************/
 .features{
@@ -569,7 +616,7 @@ transform: translateY(10px);
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 50px 100px 100px 100px;
+	padding: 40px 40px 100px;
 }
 
 .footer-container .socialMedia {
@@ -594,4 +641,19 @@ transform: translateY(10px);
 	color: #94753b;
 	font-size: 1.1em;
 	text-align: center;
+}
+
+@media (max-width: 400px){
+	.footer-container img{
+		width: 200px;
+	}
+	.footer-container .socialMedia li a{
+	font-size: 2em;
+	}
+	.footer-container p{
+	font-size: 2vh;
+		padding: 1em;
+	margin: 1em;
+	line-height: 1em;;
+}
 }
