@@ -246,7 +246,7 @@ ul li a:hover::before{
 	line-height: 1em;
 padding: 1em;
 margin: 1em;
-	text-align: start;
+	text-align: center;
 }
 .whatis .what .btn-play{
 	font-size: 1.5em;
@@ -344,7 +344,7 @@ margin: 1em;
 	text-shadow: 2px 3px 0 rgba(0, 0, 0, 1);
 	line-height: 1.45;
 	font-size: 3.3vh;
-	text-align: start;
+	text-align: center;
 }
 
 
