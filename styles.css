@@ -2,9 +2,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
 }
 .container-box{
-	background: #fbdd65;
+	background: url(finales/textura1.jpg);
+
 }
 .product-title{
 	text-align: center;
@@ -55,9 +57,7 @@ nav{
 	overflow: hidden;	
 }
 
-ul li a:hover{
-	transform: translateY(10px);
-}
+
 ul li a::before{
 	content: '';
 	position: absolute;
@@ -187,37 +187,95 @@ ul li a:hover::before{
 .whatis{   
  		position: relative;
  		display: flex;
+ 		flex-direction: column;
  		flex-flow: row wrap;
  		align-items: center;
  		justify-content: center;
  		grid-gap: 30px 50px;
  		gap: 30px 50px;
- 		padding: 40px 40px 100px;
  		width: 100%;
+ 		top: -80px;
 }
 .whatis .what{
-	width: 50%;
+	width: 800px;
+	display: flex;
+ 		flex-direction: column;
+ 		align-items: center;
+ 		justify-content: center;
+ 		margin: 10px 20px;
 }
-
+.box-img-p{
+	display: flex;
+	margin: 10px 20px;
+}
+.box-img-p img{
+	margin: 30px 0;
+	height: 250px;
+}
 .whatis .what h1{
+	position: relative;
 	font-family: 'Rye', cursive;
 	color: #3b3221;
-	font-size: 2.8em;
-	text-align: start;
+	font-size: calc(2em + 1vw);
+	text-align: center;
+	margin: 10px 20px;
 }
 .whatis .what p{
 	margin: 30px 0;
 	font-family: 'Roboto Slab', serif;
-	line-height: 1.45;
 	font-weight: 600;
 	color: #94753b;
-	font-size: 1.1em;
+	font-size: 3.3vh;
+	line-height: 1em;
+padding: 1em;
+margin: 1em;
 	text-align: start;
 }
-.whatis .whatIsImg{
-	display: block;
-	width: min(100%,400px);
+.whatis .what .btn-play{
+	font-size: 1.5em;
+	font-family: 'Bebas Neue', cursive;
+	color: #fff;
+	letter-spacing: 2px;
+	padding: 0 20px;
+	background:#91712d ;
+	border:  1px solid rgba(0, 0, 0, 0.4);	
+	border-radius: 20px;
+	border-bottom:  1px solid rgba(148, 117, 59, 0.2);	
+	border-right:  1px solid rgba(148, 117, 59, 0.2);
+	box-shadow: 2px 3px 0 rgba(0, 0, 0, 1);
+	backdrop-filter: blur(2px);
+	cursor: pointer;
+	transition: 0.5s;
+	overflow: hidden;	
 }
+.whatis .what .btn-play::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 60px;
+	background: rgba(255, 255, 255, 0.5);
+	transform: skewX(45deg) translateX(230px);
+	transition: 0.5s;
+}
+.whatis .what .btn-play:hover::before{
+	transform: skewX(45deg) translateX(-150px);
+}
+@media screen and (max-width: 992px) {
+	.box-img-p img{
+		display: none;
+	}
+	.whatis .what p{
+	
+	font-size: 3.3vh;
+	line-height: 1em;
+padding: 1em;
+margin: 1em;
+	text-align: start;
+}
+}
+
 /************	HOW DO I GET REWARDS	************/
 .rewards{   
  		position: relative;
@@ -229,6 +287,7 @@ ul li a:hover::before{
  		gap: 30px 50px;
  		padding: 40px 40px 100px;
  		width: 100%;
+ 		background: url(finales/textura4.jpg);
 }
 .rewards .reward{
 	width: 50%;
@@ -236,23 +295,20 @@ ul li a:hover::before{
 
 .rewards .reward h1{
 	font-family: 'Rye', cursive;
-	color: #3b3221;
-	font-size: 2.8em;
+	color: #fbdd65;
+	font-size: calc(2em + 1vw);
 	text-align: start;
 }
 .rewards .reward p{
 	margin: 30px 0;
 	font-family: 'Roboto Slab', serif;
 	font-weight: 600;
-	color: #94753b;
+	color: #fbdd65;
 	line-height: 1.45;
 	font-size: 1.1em;
 	text-align: start;
 }
-.rewards .rewardImg{
-	display: block;
-	width: min(100%,400px);
-}
+
 
 @media screen and (max-width: 992px) {
 	.rewards{
@@ -269,12 +325,18 @@ ul li a:hover::before{
 .products{
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	flex-wrap: wrap;
 	width: 100%;
+	padding: 40px 40px 40px;
 	transform-style: preserve-3d;
+background: url(finales/textura3.jpg);
+}
+.products .product-title{
+	font-size: calc(2em + 1vw);
 }
 
 .products .box{
@@ -353,14 +415,9 @@ transform: translateY(10px);
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-}
-.products .cactus{
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 2rem;
-	width: 90%;
 }
+
 @media screen and (max-width: 992px){
 	.products .cactus{
 	display: flex;
@@ -370,9 +427,6 @@ transform: translateY(10px);
 }
 }
 
-.products .cactus img{
-	width: 150px;
-}
 .products .box .buy{
 	position: absolute;
 	bottom: 0;
@@ -439,79 +493,74 @@ transform: translateY(10px);
 	transform: translate3d(-50%, -50%, 100px) rotate(1deg);
 }
 
+
+
 /************	FEATURES	************/
 .features{
 	position: relative;
 	display: flex;
-	flex-direction: row;
-	flex-flow: wrap;
-	align-items: center;
- 		justify-content: center;
- 		grid-gap: 30px 45px;
- 		padding: 40px 1px 100px;
- 		width: 100%;
-}
-.features .features-container{
-	position: relative;
-	display: flex;
+	padding: 40px 40px 40px;
 	flex-direction: column;
-	width: 30%;
-
+	text-align: center;
+	align-items: center;
+		background: url(finales/textura2.jpg);
 }
-.features .features-container h1{
+.features h1{
 	font-family: 'Rye', cursive;
-	color: #3b3221;
-	font-size: 2.8em;
-	text-align: end;
+	color: #fbdd65;
+	font-size: calc(2em + 1vw);
+	text-align: center;
 }
-.features .features-container ul{
-	list-style: none;
+.features .accordion{
+	max-width: 800px;
 }
-.features .features-container ul li {
+.accordion .contentBx{
 	position: relative;
-	padding: 9px 20px;
-	background: linear-gradient(to right, rgba(255,255,255,0), rgba(148, 117, 59, 0.5));
-	backdrop-filter: blur(2px);
-	transition: 0.5s;
-	overflow: hidden;	
-	font-family: 'Bebas Neue', cursive;
-	color: rgba(99, 84, 54, 1.0);
-	font-size: 1.5em;
-	text-align: end;
+	margin: 10px 20px;
+}
+.accordion .contentBx .label{
+	position: relative;
+	border-radius: 20px 20px 0 0;
+	padding: 10px;
+	background: #7b5f24;
+	font-family: 'Rye', cursive;
+	color: #f2d560;
+	text-align: left;
 	cursor: pointer;
 }
-
-.features .features-container ul li:hover{
-	transform: translateX(30px);
-}
-.features .text-container{
-	position: relative;
-	width: 50%;
-	height: 300px;
-	background: #94753b;
-	border-radius: 20px;
-	box-shadow: 2px 3px 5px rgba(0, 0, 0, 1);
-}
-.features .text-container .container-t{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-
-}
-.features .text-container .container-t h2{
-	margin: 20px;
-	font-family: 'Rye', cursive;
-	color: #3b3221;
-	text-align: start;
-}
-.features .text-container .container-t p{
-	margin: 0 20px;
-	font-family: 'Roboto Slab', serif;
-	font-weight: 400;
-	line-height: 1.45;
+.accordion .contentBx .label::before{
+	content: "+";
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	font-size: 1.5em;
 	color: #fff;
-	font-size: 1.3em;
+}
+.accordion .contentBx.active .label::before{
+	content: "-";
+	color: #fff;
+}
+.accordion .contentBx .content{
+	position: relative;
+	background: #91712d;
+	height: 0;
+	border-radius: 0  0 20px 20px;
+	overflow: hidden;
+	transition: 0.5s;
+	overflow-y: auto;
+}
+.accordion .contentBx .content p{
+	font-family: 'Roboto Slab', serif;
+	font-weight: 600;
+	color: #f2d560;
+	line-height: 1.45;
+	font-size: 1em;
 	text-align: start;
+}
+.accordion .contentBx.active .content{
+	height: 150px;
+	padding: 10px;
 }
 
 /************	FOOTER	************/
@@ -520,7 +569,7 @@ transform: translateY(10px);
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 0 100px 100px 100px;
+	padding: 50px 100px 100px 100px;
 }
 
 .footer-container .socialMedia {

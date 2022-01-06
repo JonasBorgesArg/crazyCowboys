@@ -50,18 +50,21 @@
 			</div>
 		</div>
 	</header>
-	<section class="whatis">
+	<section class="whatis" id="whatis">
 		<div class="what">
 			<h1>WHAT IS CRAZYCOWBOYS</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. <br>Illo, molestiae tenetur minus. Recusandae, mollitia eius nobis vitae iste obcaecati modi.<br><br> Soluta odio dolore, distinctio illo consectetur rem porro reiciendis inventore.
-			Lorem ipsum dolor sit amet consectetur adipisicing, elit. <br><br>Illo, molestiae tenetur minus. Recusandae, mollitia eius nobis vitae iste obcaecati modi. Soluta odio dolore, distinctio illo consectetur rem porro reiciendis inventore
+			<div class="box-img-p">
+			<img src="finales/cactus.png" class="cactus-wi" alt="cactus">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. <br>Illo, molestiae tenetur minus. Recusandae, mollitia eius nobis vitae iste obcaecati modi.<br> Soluta odio dolore, distinctio illo consectetur rem porro reiciendis inventore.
+			Lorem ipsum dolor sit amet consectetur adipisicing, elit. <br> <br>Illo, molestiae tenetur minus. Recusandae, mollitia eius nobis vitae iste obcaecati modi. Soluta odio dolore, distinctio illo consectetur rem porro reiciendis inventore
 			</p>
+			</div>
+			<button class="btn-play">PLAY NOW</button>
 		</div>
-		<img src="img/pj1.png" alt="pj1" class="whatIsImg">
+		
 	</section>
 
-	<section class="rewards">
-		<img src="img/pj1.png" alt="pj1" class="rewardImg">
+	<section class="rewards" id="rewards">
 		<div class="reward">
 			<h1>HOW DO I GET REWARDS</h1>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. <br>Illo, molestiae tenetur minus. Recusandae, mollitia eius nobis vitae iste obcaecati modi.<br><br> Soluta odio dolore, distinctio illo consectetur rem porro reiciendis inventore.
@@ -70,8 +73,8 @@
 		</div>
 	</section>
 
-	<h1 class="product-title" id="products">PRODUCTS</h1>
 	<div class="products">
+	<h1 class="product-title" id="products">PRODUCTS</h1>
 		<div class="personajes">
 			<div class="box">
 				<h2 class="name">Personaje 1</h2>
@@ -105,42 +108,58 @@
 				<div class="circle"></div>
 				<img src="finales/Pistola3.png" alt="Cactus" class="product">
 			</div>
-		<div class="cactus">
-			<div class="box">
-				<h2 class="name">Product Name</h2>
-				<a href="#" class="buy">Buy Now</a>
-				<div class="circle"></div>
-				<img src="img/cactus.png" alt="Cactus" class="product">
-			</div>
-			<div class="box">
-				<h2 class="name">Product Name</h2>
-				<a href="#" class="buy">Buy Now</a>
-				<div class="circle"></div>
-				<img src="img/cactus.png" alt="Cactus" class="product">
-			</div>
-			</div>
 		</div>
 	</div>
+	
 	<section class="features" id="moreFeatures">
-		<div class="features-container">
-			<h1>Features</h1>
-			<ul>
-				<li onclick="security()">Security</li>
-				<li onclick="staking()">Staking</li>
-				<li onclick="antibots()">Antibots</li>
-				<li onclick="noBnbFees()">No BNB Fees</li>
-				<li onclick="playEarn()">Play & Earn</li>
-			</ul>
-		</div>
-		<div class="text-container">
-			<div class="container-t">
-				<h2 id="container-title">Security</h2>
-				<p id="container-text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minima exercitationem odit natus, molestias quos, voluptate provident sapiente praesentium. Vel.
-				</p>
+		<h1>Features</h1>
+		<div class="accordion">
+			<div class="contentBx active">
+				<div class="label">Feature 1</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					Illo, doloribus! Nesciunt a itaque iure harum placeat 
+     				corrupti ipsam asperiores sunt?</p>
+				</div>
+			</div>
+			<div class="contentBx">
+				<div class="label">Feature 2</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					Illo, doloribus! Nesciunt a itaque iure harum placeat 
+     				corrupti ipsam asperiores sunt?<br><br>
+     			Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					Illo, doloribus! Nesciunt a itaque iure harum placeat 
+     				corrupti ipsam asperiores sunt?</p>
+				</div>
+			</div>
+			<div class="contentBx">
+				<div class="label">Feature 3</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					Illo, doloribus! Nesciunt a itaque iure harum placeat 
+     				corrupti ipsam asperiores sunt? <br>
+     			Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					Illo, doloribus! Nesciunt a itaque iure harum placeat 
+     				corrupti ipsam asperiores sunt?<br>
+     			Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					</p>
+				</div>
+			</div>
+			<div class="contentBx">
+				<div class="label">Feature 4</div>
+				<div class="content">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					Illo, doloribus! Nesciunt a itaque iure harum placeat 
+     				corrupti ipsam asperiores sunt?<br><br>
+     			Lorem ipsum dolor sit amet consectetur adipisicing, elit. 
+					Illo, doloribus! Nesciunt a itaque iure harum placeat 
+     				corrupti ipsam asperiores sunt?</p>
+				</div>
 			</div>
 		</div>
 	</section>
+
 	<footer class="footer-container">
 		<img src="finales/logo.png" alt="logo-footer">
 			<ul class="socialMedia">

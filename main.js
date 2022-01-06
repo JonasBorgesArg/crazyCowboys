@@ -41,25 +41,12 @@ function parallax(e){
 
 
 //features
-function security(){
-  document.getElementById("container-title").textContent = "Security"
-  document.getElementById("container-text").textContent ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minima exercitationem odit natus, molestias quos, voluptate provident sapiente praesentium. Vel."
-}
-function staking(){
-  document.getElementById("container-title").textContent = "Staking"
-  document.getElementById("container-text").textContent ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minima exercitationem odit natus"
-}
-function antibots(){
-  document.getElementById("container-title").textContent = "Antibots"
-  document.getElementById("container-text").textContent ="Dolorum minima exercitationem odit natus, molestias quos, voluptate provident sapiente praesentium."
-}
-function noBnbFees(){
-  document.getElementById("container-title").textContent = "No BNB Fees"
-  document.getElementById("container-text").textContent ="dolor sit amet consectetur adipisicing elit. Dolorum minima exercitationem odit natus, molestias quos, voluptate provident sapiente praesentium"
-}
-function playEarn(){
-  document.getElementById("container-title").textContent = "Play & Earn"
-  document.getElementById("container-text").textContent ="voluptate provident sapiente praesentium. Vel."
+const accordion = document.getElementsByClassName("contentBx")
+
+for (i = 0; i <accordion.length; i++) {
+  accordion[i].addEventListener("click", function(){
+    this.classList.toggle("active")
+  })
 }
 
 document.addEventListener("DOMContentLoaded", (e)=>{
