@@ -5,7 +5,7 @@
 
 }
 .container-box{
-	background: url(finales/textura1.jpg);
+	background: url(img/textura1.jpg);
 
 }
 .product-title{
@@ -88,6 +88,17 @@ ul li a:hover::before{
 	filter: invert(1);
 	background: rgba(255, 255, 255, .8);
 }	
+.nav ul li a{
+	background:rgba(0, 0, 0, .5);
+}
+ul li a::before{
+	content: '';
+	position: absolute;
+	display: none;
+	background: rgba(255, 255, 255, 0.5);
+	transform: skewX(45deg) translateX(230px);
+	transition: 0.5s;
+}
   .navigation{
   position:fixed;
 	display: flex;
@@ -107,6 +118,7 @@ ul li a:hover::before{
   .navigation.is-active{
   	transform: translate(0,0);
   }
+
   
   .navigation li{
   	width: 100%;
@@ -323,7 +335,7 @@ margin: 1em;
  		gap: 30px 50px;
  		padding: 40px 40px 100px;
  		width: 100%;
- 		background: url(finales/textura4.jpg);
+ 		background: url(img/textura4.jpg);
 }
 .rewards .reward{
 	width: 800px;
@@ -381,9 +393,9 @@ margin: 1em;
 	min-height: 100vh;
 	flex-wrap: wrap;
 	width: 100%;
-	padding: 40px 40px 40px;
+	padding: 40px 30px 40px;
 	transform-style: preserve-3d;
-background: url(finales/textura3.jpg);
+background: url(img/textura3.jpg);
 }
 .products .product-title{
 	font-size: calc(2em + 1vw);
@@ -465,7 +477,7 @@ transform: translateY(10px);
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: 2rem;
+	
 }
 
 
@@ -510,6 +522,12 @@ transform: translateY(10px);
 .products .box:nth-child(2) .circle{
 	background: rgba(91, 165, 212, 1.0);
 }
+.products .pj-sec .box:nth-child(1)  .circle{
+	background: #FF4A5F;
+}
+.products .pj-sec .box:nth-child(2) .circle{
+	background: #B163FF;
+}
 .pistolas .box:nth-child(1) .circle{
 	background: rgba(186, 79, 47, 1.0);
 }
@@ -534,6 +552,13 @@ transform: translateY(10px);
 .products .box:hover .product{
 	transform: translate3d(-50%, -50%, 100px) rotate(1deg);
 }
+.products .personajes .pj-sec{
+	display: flex;
+	flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
 
 @media screen and (max-width: 992px){
 	.products .cactus{
@@ -557,7 +582,7 @@ transform: translateY(10px);
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
-		background: url(finales/textura2.jpg);
+		background: url(img/textura2.jpg);
 }
 .features h1{
 	font-family: 'Rye', cursive;
