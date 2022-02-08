@@ -118,8 +118,7 @@ ul li a::before{
   .navigation.is-active{
   	transform: translate(0,0);
   }
-
-  
+ 
   .navigation li{
   	width: 100%;
   	padding-top:2rem;
